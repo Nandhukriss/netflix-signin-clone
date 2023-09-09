@@ -16,10 +16,15 @@
             <div class="form">
                 <h1>Sign In</h1>
                 <form action="">
-                    <input type="text" placeholder="Email or Phone number"  class="fields" required="Please enter a valid email address or phone number.">
+                    <input type="text" placeholder="Email" class="fields"  autocomplete="off" id="email">
                     <br><br>
-                    <input type="text" placeholder="Password" class="fields">
-                    <br><br><br>
+                    <label for="" class="warning" id="alert_e" style="visibility: hidden;">Please enter a valid email address or phone number.</label>
+                    <div>
+                        <input type="password" placeholder="Password" class="fields" autocomplete="off" id="pass">
+                        <button id="show_pass" type="button">SHOW</button>
+                    </div>
+                    <br><br>
+                    <label for="" class="warning" style="visibility: hidden;" id="alert_p">Your password must contain between 4 and 60 <br><span style="margin-left: 10px;">characters.</span></label>
                     <input type="submit" value="Sign In" id="red-button"><br><br>
                     <input type="checkbox" name="Remember me" id="remember"><label for="Remember me">Remember me</label> <a href="https://help.netflix.com/legal/privacy" id="need-help">Need help?</a>
                 </form>
@@ -59,14 +64,12 @@
             <div class="right"></div>
         </div>
     </div>
+ 
 
-    <script>
-        function showPrivacyTerms() {
-            var hiddenPara = document.getElementById('hidden-para');
-            hiddenPara.innerHTML = "The information collected by Google reCAPTCHA is <br> to the Google <a href='https://policies.google.com/privacy'>Privacy Policy</a> and <a href='https://policies.google.com/terms'>Terms of <br> Service</a>, and is used for providing, maintaining, and <br> improving the reCAPTCHA service and for general <br> security purposes (it is not used for personalised <br> advertising by Google).";
-            document.getElementById('show').style.display='none'
+    
+    
+    <script src="js/script.js">
 
-        }
     </script>
 </body>
 </html>
