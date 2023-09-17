@@ -9,6 +9,7 @@ var email=document.getElementById('email')
 var pass=document.getElementById('pass')
 var warning1=document.getElementById('alert_e')
 var warning2=document.getElementById('alert_p')
+var form =document.getElementById('form')
 email.addEventListener('blur',function(){
     if(email.value.trim()!=""){
 
@@ -44,9 +45,35 @@ document.getElementById('show_pass').addEventListener('click', function () {
  
     if(pass.type=="password"){
         pass.type="text"
+        document.getElementById('show_pass').innerHTML='HIDE'
     }else{
-
+        
+        document.getElementById('show_pass').innerHTML='HIDE'
         pass.type="password"
+        document.getElementById('show_pass').innerHTML='SHOW'
+
     }
 });
 
+form.addEventListener('submit', function (event) 
+
+    {    event.preventDefault();
+    // prevent  form submission
+    
+  
+    if (email.value.trim() === "" ){
+
+
+        warning1.style.visibility="visible"
+        email.style.boxShadow=" 0px 1.5px 1px  #e87c03"
+        return false
+    }
+    if (pass.value.trim()!=""){
+        
+        warning2.style.visibility="visible"
+        pass.style.boxShadow=" 0px 1.5px 1px  #e87c03"
+
+        return false
+    }
+    form.submit();
+});
