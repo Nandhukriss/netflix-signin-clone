@@ -69,6 +69,7 @@ form.addEventListener('submit', function (event) {
         pass.style.boxShadow = "0px 1.5px 1px #e87c03";
         isEmpty=true
     }
+    
     if(!isEmpty){
 
         form.submit();
