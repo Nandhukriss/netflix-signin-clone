@@ -4,12 +4,11 @@
     padding: 0;
 }
 body{
-
-    background-image: url('../images/bg.jpg');
+    background-image: url('../images/bg.jpg') ;
+    overflow-x: hidden;
     background-size:cover;
     background-position: center;
     font-family:Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
-
 }
 
 .header{
@@ -130,7 +129,7 @@ h1{
    width: 370px;
     margin-left: 40px;
     margin-top: 10px;
-    /* border: solid white; */
+
    
 }
 .fields{
