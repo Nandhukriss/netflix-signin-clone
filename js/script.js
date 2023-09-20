@@ -55,25 +55,22 @@ document.getElementById('show_pass').addEventListener('click', function () {
     }
 });
 
-form.addEventListener('submit', function (event) 
-
-    {    event.preventDefault();
-    // prevent  form submission
-    
-  
-    if (email.value.trim() === "" ){
-
-
-        warning1.style.visibility="visible"
-        email.style.boxShadow=" 0px 1.5px 1px  #e87c03"
-        return false
+form.addEventListener('submit', function (event) {
+    event.preventDefault(); // prevent form submission
+    var isEmpty=false
+    if (email.value.trim() == "") {
+        warning1.style.visibility = "visible";
+        email.style.boxShadow = "0px 1.5px 1px #e87c03";
+        isEmpty=true
     }
-    if (pass.value.trim()!=""){
-        
-        warning2.style.visibility="visible"
-        pass.style.boxShadow=" 0px 1.5px 1px  #e87c03"
 
-        return false
+    if (pass.value.trim() == "") {
+        warning2.style.visibility = "visible";
+        pass.style.boxShadow = "0px 1.5px 1px #e87c03";
+        isEmpty=true
     }
-    form.submit();
+    if(!isEmpty){
+
+        form.submit();
+    }
 });
